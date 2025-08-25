@@ -9,7 +9,7 @@ class SecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        welcomeLabel.text = userName
+        welcomeLabel.text = "Welcome, \(String(describing: userName))"
     }
     
     @IBAction func logOutBtn(_ sender: UIButton) {

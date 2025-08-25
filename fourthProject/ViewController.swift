@@ -17,14 +17,22 @@ final class ViewController: UIViewController {
     
     
     @IBAction func loginToAccountAction(_ sender: UIButton) {
-        //SecondViewController.userName = loginTF.text ?? ""
+        if loginTF.text == "User" && passwordTF.text == "12345" {
+            performSegue(withIdentifier: "SecondViewControllerS", sender: self)
+        } else {
+            showAlert(title: "You've entered wrong data", message: "Please try again")
+        }
     }
+    
     @IBAction func forgotUsernNameBtn(_ sender: UIButton) {
         showAlert(title: "You've forgot your username", message: "Please contact support")
     }
+    
     @IBAction func ForgotPasswordBtn(_ sender: UIButton) {
         showAlert(title: "You've forgot your password", message: "Please contact support")
     }
+    
+    
     
     private func showAlert(title: String, message: String) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
