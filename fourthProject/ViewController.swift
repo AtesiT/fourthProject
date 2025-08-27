@@ -5,6 +5,7 @@ final class ViewController: UIViewController {
     @IBOutlet var loginTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
+    var toClearData: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +37,9 @@ final class ViewController: UIViewController {
     
     private func showAlert(title: String, message: String) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default)
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+            self.passwordTF.text = ""
+        }
         alertController.addAction(okAction)
         present(alertController, animated: true)
     }
