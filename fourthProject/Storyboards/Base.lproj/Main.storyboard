@@ -158,7 +158,7 @@
         <!--nameOfProfile-->
         <scene sceneID="oWi-wd-CV5">
             <objects>
-                <viewController title="nameOfProfile" id="SQ3-5l-j8K" sceneMemberID="viewController">
+                <viewController title="nameOfProfile" id="SQ3-5l-j8K" customClass="BiographyViewController" customModule="fourthProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uLe-AT-aWO">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -285,15 +285,23 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="companyLabel" destination="ADn-Ea-hZW" id="wva-sy-cRi"/>
+                        <outlet property="departmentLabel" destination="BUg-6F-Jir" id="mR3-oG-mie"/>
+                        <outlet property="nameLabel" destination="YED-U9-bpT" id="yIW-5s-gO1"/>
+                        <outlet property="nameOfBiography" destination="5SU-6p-Vbd" id="HKe-Uw-Ype"/>
+                        <outlet property="positionLabel" destination="N5F-eY-E5w" id="2GR-3W-7Fq"/>
+                        <outlet property="surnameLabel" destination="cvo-oe-KQi" id="O8i-iq-aia"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rbf-GD-yLu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2666.4122137404579" y="745.77464788732402"/>
         </scene>
-        <!--View Controller-->
+        <!--Description Biography View Controller-->
         <scene sceneID="bEI-CB-HvJ">
             <objects>
-                <viewController id="6F0-PV-ZGu" sceneMemberID="viewController">
+                <viewController id="6F0-PV-ZGu" customClass="DescriptionBiographyViewController" customModule="fourthProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="71D-8T-irv">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -325,6 +333,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Fed-fP-xQv"/>
+                    <connections>
+                        <outlet property="descriptionOfBiography" destination="3xf-Zn-z8l" id="tof-BK-8HF"/>
+                        <outlet property="nameOfBiography" destination="0th-1K-1Su" id="Ss7-xV-VDc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I5o-aP-reE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
