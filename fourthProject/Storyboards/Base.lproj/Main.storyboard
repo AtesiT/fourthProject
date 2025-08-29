@@ -105,19 +105,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="264" translatesAutoresizingMaskIntoConstraints="NO" id="DE7-7X-zne">
-                                <rect key="frame" x="126.66666666666669" y="208.99999999999997" width="140" height="426.33333333333326"/>
+                                <rect key="frame" x="46.666666666666657" y="89.000000000000028" width="300" height="472.66666666666674"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="hMB-e0-DWP">
-                                        <rect key="frame" x="0.0" y="0.0" width="140" height="132.33333333333334"/>
+                                        <rect key="frame" x="79" y="0.0" width="142" height="178.66666666666666"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, @name!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tzp-Ft-W14">
-                                                <rect key="frame" x="0.0" y="0.0" width="140" height="20.333333333333332"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="142" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MyNameIs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vex-VO-03F">
+                                                <rect key="frame" x="30.666666666666664" y="46.333333333333343" width="80.666666666666686" height="20.333333333333329"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👋🏻" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JON-4d-8UD">
-                                                <rect key="frame" x="31.333333333333329" y="46.333333333333343" width="77" height="86"/>
+                                                <rect key="frame" x="32.333333333333329" y="92.666666666666657" width="77" height="86"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="72"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -125,7 +131,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bij-d3-cWg">
-                                        <rect key="frame" x="42.333333333333329" y="396.33333333333337" width="55" height="30"/>
+                                        <rect key="frame" x="122.33333333333334" y="442.66666666666663" width="55" height="30"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Log Out"/>
                                         <connections>
@@ -134,20 +140,23 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="140" id="tia-jw-xxG"/>
+                                    <constraint firstAttribute="width" constant="300" id="Bd8-b3-My3"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eLD-Ap-TtM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="DE7-7X-zne" firstAttribute="width" secondItem="J39-af-bH5" secondAttribute="height" multiplier="35:213" id="PNg-cX-eo2"/>
-                            <constraint firstItem="DE7-7X-zne" firstAttribute="centerX" secondItem="eLD-Ap-TtM" secondAttribute="centerX" id="SH7-wN-3Uf"/>
-                            <constraint firstItem="DE7-7X-zne" firstAttribute="top" secondItem="eLD-Ap-TtM" secondAttribute="top" constant="150" id="vpd-36-5pa"/>
+                            <constraint firstItem="DE7-7X-zne" firstAttribute="top" secondItem="eLD-Ap-TtM" secondAttribute="top" constant="30" id="1U0-im-GLr"/>
+                            <constraint firstItem="DE7-7X-zne" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="eLD-Ap-TtM" secondAttribute="leading" constant="40" id="CU3-C3-Odo"/>
+                            <constraint firstItem="DE7-7X-zne" firstAttribute="width" secondItem="J39-af-bH5" secondAttribute="height" multiplier="25:71" id="Ugx-Pu-JDj"/>
+                            <constraint firstItem="eLD-Ap-TtM" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="DE7-7X-zne" secondAttribute="trailing" constant="40" id="vXY-JH-Ix9"/>
+                            <constraint firstItem="DE7-7X-zne" firstAttribute="centerX" secondItem="eLD-Ap-TtM" secondAttribute="centerX" id="yv0-eK-7Fg"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="person.fill" catalog="system" id="R7R-kO-kNH"/>
                     <connections>
+                        <outlet property="myNameIsLabel" destination="Vex-VO-03F" id="sBP-CH-rUf"/>
                         <outlet property="welcomeLabel" destination="Tzp-Ft-W14" id="7ek-Zm-0GR"/>
                     </connections>
                 </viewController>
@@ -278,6 +287,7 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="Nd4-br-gVE">
+                        <barButtonItem key="backBarButtonItem" title="Biography" id="YC1-gd-wKh"/>
                         <barButtonItem key="rightBarButtonItem" title="Bio" id="ZnB-ZX-RZl">
                             <connections>
                                 <segue destination="6F0-PV-ZGu" kind="show" id="zZx-77-YSh"/>

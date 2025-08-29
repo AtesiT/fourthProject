@@ -3,6 +3,7 @@ import UIKit
 final class SecondViewController: UIViewController {
 
     @IBOutlet var welcomeLabel: UILabel!
+    @IBOutlet var myNameIsLabel: UILabel!
     
     var userName: String!
     
@@ -16,11 +17,20 @@ final class SecondViewController: UIViewController {
         view.layer.insertSublayer(gradientLayerForSecondVliew, at: 0)
         gradientLayerForSecondVliew.frame = view.bounds
         
-        welcomeLabel.text = "Welcome, \(userName ?? "")"
+        configureLabel(welcomeLabel)
+        configureLabel(myNameIsLabel)
+        
+        welcomeLabel.text = "Welcome, \(firstUser.user)!"
+        myNameIsLabel.text = "My name is \(timCook.name)!"
     }
     
     @IBAction func logOutBtn(_ sender: UIButton) {
         dismiss(animated: true)
+    }
+    
+    private func configureLabel(_ label: UILabel) {
+        label.font = UIFont.systemFont(ofSize: 24, weight: .bold)
+        label.textColor = .white
     }
     
 }

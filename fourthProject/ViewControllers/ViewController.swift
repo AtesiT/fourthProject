@@ -14,11 +14,12 @@ final class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             let destinationVC = segue.destination as? SecondViewController
             destinationVC?.userName = loginTF.text!
+            print("User name passed: \(loginTF.text ?? "")")
     }
     
     
     @IBAction func loginToAccountAction(_ sender: UIButton) {
-        if loginTF.text == "User" && passwordTF.text == "12345" {
+        if loginTF.text == firstUser.user && passwordTF.text == firstUser.password {
             performSegue(withIdentifier: "SecondViewControllerS", sender: self)
         } else {
             showAlert(title: "You've entered wrong data", message: "Please try again")
