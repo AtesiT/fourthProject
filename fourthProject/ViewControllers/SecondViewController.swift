@@ -17,8 +17,8 @@ final class SecondViewController: UIViewController {
         view.layer.insertSublayer(gradientLayerForSecondVliew, at: 0)
         gradientLayerForSecondVliew.frame = view.bounds
         
-        configureLabel(welcomeLabel)
-        configureLabel(myNameIsLabel)
+        welcomeLabel.configureLabel()
+        myNameIsLabel.configureLabel()
         
         welcomeLabel.text = "Welcome, \(firstUser.user)!"
         myNameIsLabel.text = "My name is \(timCook.name)!"
@@ -28,9 +28,15 @@ final class SecondViewController: UIViewController {
         dismiss(animated: true)
     }
     
-    private func configureLabel(_ label: UILabel) {
-        label.font = UIFont.systemFont(ofSize: 24, weight: .bold)
-        label.textColor = .white
+}
+
+extension UILabel {
+    func configureLabel(
+        textcolor: UIColor = .white,
+        fontSize: CGFloat = 24,
+        fontWeight: UIFont.Weight = .bold
+    ) {
+        self.textColor = textcolor
+        self.font = UIFont.systemFont(ofSize: fontSize, weight: fontWeight)
     }
-    
 }

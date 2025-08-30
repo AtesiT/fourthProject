@@ -22,11 +22,26 @@ final class BiographyViewController: UIViewController {
         gradientLayerForSecondVliew.frame = view.bounds
         
         
+        nameOfBiography.makeWhiteColor()
+        nameLabel.makeWhiteColor()
+        surnameLabel.makeWhiteColor()
+        companyLabel.makeWhiteColor()
+        departmentLabel.makeWhiteColor()
+        positionLabel.makeWhiteColor()
+        
         nameOfBiography.text = "\(timCook.name) \(timCook.surname)"
         nameLabel.text = timCook.name
         surnameLabel.text = timCook.surname
         companyLabel.text = timCook.company
         departmentLabel.text = timCook.department
         positionLabel.text = timCook.position
+        
+        
+    }
+}
+
+extension UILabel {
+    func makeWhiteColor(textcolor: UIColor = .white) {
+        self.textColor = textcolor
     }
 }

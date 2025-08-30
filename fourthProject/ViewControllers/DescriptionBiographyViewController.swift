@@ -18,5 +18,8 @@ final class DescriptionBiographyViewController: UIViewController {
         
         nameOfBiography.text = "\(timCook.name) \(timCook.surname)"
         descriptionOfBiography.text = timCook.biography
+        
+        nameOfBiography.configureLabel()
+        descriptionOfBiography.configureLabel(fontSize: 14)
     }
 }
